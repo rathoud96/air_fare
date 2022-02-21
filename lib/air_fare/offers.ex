@@ -9,6 +9,7 @@ defmodule AirFare.Offers do
 
   alias AireFare.HTTPClient
 
+  @spec get_cheapest_offer(map()) :: map()
   def get_cheapest_offer(_args) do
     ba_airport_fare = Task.Supervisor.async_nolink(__MODULE__, fn -> get_ba_offer_price() end)
 
