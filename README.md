@@ -8,7 +8,7 @@ To start your Phoenix server:
   * Install dependencies with `mix deps.get`
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`http://localhost:4000/findCheapestOffer?origin=BER&destination=LHR&departureDate=2019-07-17`](http://localhost:4000/findCheapestOffer?origin=BER&destination=LHR&departureDate=2019-07-17) from your browser.
 
 To test the  Phoenix application:
 
