@@ -59,11 +59,11 @@ config :git_hooks,
   hooks: [
     pre_commit: [
       tasks: [
-        "mix clean",
-        "mix compile --warnings-as-errors",
-        "mix format --check-formatted",
-        "mix credo --strict",
-        "mix test"
+        {:cmd, "mix clean"},
+        {:cmd, "mix compile --warnings-as-errors"},
+        {:cmd, "mix format --check-formatted"},
+        {:cmd, "mix credo --strict"},
+        {:cmd, "mix test"}
       ]
     ]
   ]
