@@ -50,7 +50,8 @@ defmodule AirFare.MixProject do
       {:sweet_xml, "~> 0.7.1"},
       {:httpoison, "~> 1.8"},
       {:mock, "~> 0.3.0", only: :test},
-      {:git_hooks, "~> 0.7.0", only: [:dev], runtime: false}
+      {:git_hooks, "~> 0.7.0", only: [:dev], runtime: false},
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false}
     ]
   end
 

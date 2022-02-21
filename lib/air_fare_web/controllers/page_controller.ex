@@ -10,14 +10,14 @@ defmodule AirFareWeb.PageController do
   end
 
   def find_cheapest_offer(conn, params) do
-    with {:ok, valid_params} <- validate_params(params) do
-      response = Offers.get_cheapest_offer(valid_params)
-      IO.inspect(response)
+    case validate_params(params) do
+      {:ok, valid_params} ->
+        response = Offers.get_cheapest_offer(valid_params)
 
-      conn
-      |> put_status(200)
-      |> json(%{data: response})
-    else
+        conn
+        |> put_status(200)
+        |> json(%{data: response})
+
       {:error, _changeset} ->
         conn
         |> put_status(400)
